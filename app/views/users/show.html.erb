@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      
+        <h1>simply.me</h1>
+        <%=image_tag("Piercycle.jpg", class: "landing-image")%>
+        <%= @user.email %><br />
+<%= @user.id %><br />
+<%= @user.first_name %><br />
+<%= @user.last_name %><br />
+<%= @user.bio_text %><br />
+<%= image_tag @user.avatar.url(:thumb) %>
+
+<%= link_to "Upload photo", new_user_photo_path(@user) %>
+
+
+Photo time!
+            <% @user.photos.each do |p| %>
+                <%= image_tag p.image.url(:medium) %><br />
+                <br />  
+          
+            <% end %>
+      </div>
+  </div>
+</div>
+  
+
+      
+  
+
+
+
+<%#= render partial: 'layouts/map'%>
