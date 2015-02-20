@@ -33,7 +33,7 @@ class UsersController < ApplicationController #bitchezzzzz!!!!
     user = User.new((params.require(:user).permit(:email, :password, :password_confirmation, :first_name, :last_name, :bio_text, :avatar)))
     #respond_to do |format|
       if user.save
-          UserMailer.welcome(user).deliver_now
+          #UserMailer.welcome(user).deliver_now
           redirect_to new_sessions_path
         #format.html { redirect_to @user, notice: 'user was successfully created.' }
         #format.json { render :show, status: :created, location: @order }
