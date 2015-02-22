@@ -1,5 +1,3 @@
-#Ignore the _nav partial because it has an API key
-/app/views/layouts/_map.html.erb
 
 # Ignore application configuration
 /config/application.yml
