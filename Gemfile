@@ -7,8 +7,14 @@ gem 'bootstrap_form'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
+
+#PostGreSQL Gem
 gem 'pg'
+#Figaro gem to obscure confidential passwords and APIs, etc, and set them up in Heroku
 gem "figaro"
+# Amazon-AWS gem to use things like S3
+gem 'aws-sdk', '< 2.0'
+#Bootstrap gem 
 gem 'bootstrap-sass', '~> 3.2.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

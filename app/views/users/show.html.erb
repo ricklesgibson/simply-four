@@ -1,9 +1,9 @@
-<div class="container-fluid">
+<div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="well col-md-12">
       
         <h1>simply.me</h1>
-        <%=image_tag("Piercycle.jpg", class: "landing-image")%>
+        <h1><%=image_tag("Piercycle.jpg", width: '100%')%><h1>
         <%= @user.email %><br />
 <%= @user.id %><br />
 <%= @user.first_name %><br />
@@ -20,6 +20,7 @@ Photo time!
                 <br />  
           
             <% end %>
+ <%= render partial: 'layouts/map'%>           
       </div>
   </div>
 </div>
@@ -30,4 +31,4 @@ Photo time!
 
 
 
-<%#= render partial: 'layouts/map'%>
+
