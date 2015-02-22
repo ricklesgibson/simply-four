@@ -1,20 +1,31 @@
-<div class="container">
-<div class="row" >
-<div class="well col-md-6 col-md-offset-3">
-      
-      <h1> Hi </h1>
+
+<section id="home" class="row-fluid" id="home">
+      <div class="dots">
+        <article>
+          <div id="welcome"></div>
+          Welcome to Simply!
+
+          <div class="dots row" >
+      <div class=" col-md-6 col-md-offset-3">
       <%= bootstrap_form_for(@user) do |f| %>
    <%= f.text_field :email, hide_label: true,  placeholder: "e-mail" %><br>
-    <%= f.password_field :password, hide_label: true, placeholder: "Password"  %><br />
-   <%= f.password_field :password_confirmation, hide_label: true, placeholder: "Password Confirmation" %><br />
    <%= f.text_field :first_name, hide_label: true, placeholder: "First Name"  %><br>
    <%= f.text_field :last_name, hide_label: true, placeholder: "Last Name"  %><br>
-   <%= f.text_field :bio_text,  hide_label: true,placeholder: "About you!" %><br>
-   <%= f.file_field :avatar, hide_label: true, placeholder: "Profile Picture" %><br />
-
    <%= f.submit "Make My Simply!" %>
     <!-- Trigger email sent for new user -->
   </div>
+  <% end %>
    </div>
-    <% end %>
-</div>
+        </article>
+      </div>
+
+</section>
+
+
+
+
+
+
+
+
+

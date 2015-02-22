@@ -7,8 +7,7 @@ class UserMailer < ApplicationMailer
   #
   def forgot_password
     @greeting = "Hi"
-
-    mail to: "ricklesgibson@gmail.com"
+    mail to: "#{current_user.email}"
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
@@ -21,7 +20,7 @@ class UserMailer < ApplicationMailer
     @greeting = "Hi! Welcome to Simply, #{user.first_name}!"
     #@greeting = "Hi! #{user.name}"
 
-    mail to: "ricklesgibson@gmail.com", subject: "Welcome To Simply!"
+    mail to: "#{user.email}", subject: "Welcome To Simply!"
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml

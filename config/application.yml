@@ -11,8 +11,9 @@
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
 GMAIL_USERNAME: ricklesgibson@gmail.com
-GMAIL_PASSWORD: c
+GMAIL_PASSWORD: gibson85alphatango
 
 S3_SIMPLY_BUCKET: simply.me
 S3_KEY: AKIAJSBBJOEZTNYKHDTA
 S3_SECRET: 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
+GMAPS_API_KEY: AIzaSyCnKu_jgX1HO78RP-td7d9uvup_TkmJg2k

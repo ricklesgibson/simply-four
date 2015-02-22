@@ -11,13 +11,19 @@ class UsersController < ApplicationController #bitchezzzzz!!!!
   end
     
   def edit
-      @user = User.find(params[:id])
+    @user = User.find(params[:id])
+    if current_user == nil
+      redirect_to new_sessions_path
+    end
+    if current_user.id != @user.id
+      redirect_to edit_user_path(current_user)
+    end
   end
 
    def update
      user = User.find(params[:id])
     # respond_to do |format|
-      if user.update(user_params) #could also use update_attributes method
+      if current_user.update(user_params) #could also use update_attributes method
         #format.html { redirect_to @user, notice: 'user was successfully updated.' }
         #format.json { render :show, status: :ok, location: @user }
         redirect_to user
@@ -29,12 +35,15 @@ class UsersController < ApplicationController #bitchezzzzz!!!!
   end
 
 
-  def create  
-    user = User.new((params.require(:user).permit(:email, :password, :password_confirmation, :first_name, :last_name, :bio_text, :avatar)))
+  def create 
+
+    user = User.new((params.require(:user).permit(:email, :first_name, :last_name)).merge(password:'12345'))
+    
     #respond_to do |format|
       if user.save
-          #UserMailer.welcome(user).deliver_now
-          redirect_to new_sessions_path
+        session["user_id"]=user.id.to_s
+          UserMailer.welcome(user).deliver_now
+          redirect_to edit_user_path(user)
         #format.html { redirect_to @user, notice: 'user was successfully created.' }
         #format.json { render :show, status: :created, location: @order }
       else
@@ -53,6 +62,6 @@ private
     end
 
     def user_params
-      params.require(:user).permit(:email, :first_name, :last_name, :bio_text, :avatar)
+      params.require(:user).permit(:email, :first_name, :last_name, :bio_text, :avatar, :password, :password_confirmation)
     end
 end

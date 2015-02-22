@@ -1,18 +1,35 @@
-<div class="container-fluid">
-<div class="row" id="edit">
-      <div class="col-md-12 edit"><%= form_for(@user) do |f| %>
 
-  <div class="field">
-    
-   First Name<%= f.text_field :first_name %><br>
-   Last Name<%= f.text_field :last_name %><br>
-   Biography <%= f.text_field :bio_text %><br>
-   Avatar <%= f.file_field :avatar %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Update My Simply!" %>
+<section id="home" class="row-fluid" id="home">
+      <div class="dots">
+        <article>
+          <div id="welcome"></div>
+          Welcome to Simply!
+
+          <div class="dots row" >
+      <div class=" col-md-6 col-md-offset-3">
+      <%= bootstrap_form_for(@user) do |f| %>
+   <%= f.text_field :email, hide_label: true,  placeholder: "e-mail" %>
+    <%= f.password_field :password, hide_label: true, placeholder: "Password"  %>
+   <%= f.password_field :password_confirmation, hide_label: true, placeholder: "Password Confirmation" %>
+   <%= f.text_field :first_name, hide_label: true, placeholder: "First Name"  %>
+   <%= f.text_field :last_name, hide_label: true, placeholder: "Last Name"  %>
+   <%= f.text_field :bio_text,  hide_label: true,placeholder: "About you!" %>
+   <%= f.file_field :avatar, hide_label: true, placeholder: "Profile Picture", :class => "btn btn-default btn-primary" %>
+   <%= f.primary "Make My Simply!" %>
+    <!-- Trigger email sent for new user -->
   </div>
   <% end %>
-</div>
-</div>
-</div>
+   </div>
+        </article>
+      </div>
+
+</section>
+
+
+
+
+
+
+
+
+
