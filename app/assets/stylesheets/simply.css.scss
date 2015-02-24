@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import 'bootstrap';
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
  #map-canvas {
    height: 400px;
@@ -11,13 +12,28 @@
    
  }
 
+ html {
+  font-family: 'Roboto Condensed', sans-serif;
+ }
+
+ .well {
+
+  font-family: 'Roboto Condensed', sans-serif;
+ }
+
+ h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+ }
+
 body {
   background-color: blue;
-  font-family: Helvetica, sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   }
 
 html, body, .container-fluid, .row, .col-md-12 {
   height: 100%;
+  width: 100%;
+
 }
 
   .container-fluid {
@@ -55,6 +71,7 @@ html, body, .container-fluid, .row, .col-md-12 {
 //Begin navbar
 .navbar {
     margin-bottom: 0px;
+    font-family: 'Roboto:  Condensed', sans-serif;
   }
 
 $bgDefault      : #000000;
@@ -193,7 +210,9 @@ ul{
   margin: 0 auto;
 }
 
-
+#welcom {
+  font-family: 'Roboto Condensed', sans-serif;
+}
 
 #self {
   border-radius: 100%;

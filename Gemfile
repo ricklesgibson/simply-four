@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+
+#gem for client side validations
+gem 'client_side_validations'
 gem "paperclip", "~> 4.2"
 #added this because it's what made our other Heroku deploy from rails work.
 gem 'rails_12factor', group: :production
