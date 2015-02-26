@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 #gem for client side validations
-gem 'client_side_validations'
+#gem 'client_side_validations'
 gem "paperclip", "~> 4.2"
 #added this because it's what made our other Heroku deploy from rails work.
 gem 'rails_12factor', group: :production
@@ -64,5 +64,7 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'rspec-rails', '~> 3.0'
 end
 

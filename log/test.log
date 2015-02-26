@@ -1,0 +1,95 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$aGW.uxX.AkRxFhVZEOdmCeLCAoC6gxeKSmT/l23Bpn2oC3kivyETS"], ["created_at", "2015-02-26 01:12:08.072326"], ["updated_at", "2015-02-26 01:12:08.072326"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (5.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$55prVHJ/Uc940bdVGJ5d3OH9RGC7oCZf0celH./yCf0KIVyJh5eZW"], ["created_at", "2015-02-26 01:14:19.799705"], ["updated_at", "2015-02-26 01:14:19.799705"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$bckO0kRBlppRuoG/mUANge8os2Z8TUitAMbMThNrx8wXqahaSek1a"], ["created_at", "2015-02-26 01:14:40.993541"], ["updated_at", "2015-02-26 01:14:40.993541"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$lR2S8jUCc16Md2BdabiDXOEu93o1vGHeyguvZhJvRBLWL8vH4Sr7a"], ["created_at", "2015-02-26 01:18:36.166731"], ["updated_at", "2015-02-26 01:18:36.166731"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$Rf0uaVSZG6lOoeleGRCJyuDBLif3sHDBTb82eS57Ib29g5LAIn.0O"], ["created_at", "2015-02-26 01:18:36.178058"], ["updated_at", "2015-02-26 01:18:36.178058"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$yi7OGxN4OE.Q1J0riOznjuedF.ZGz543m/X5p.7FJfJ.yPHnt6Ta."], ["created_at", "2015-02-26 01:23:02.315222"], ["updated_at", "2015-02-26 01:23:02.315222"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$BKA.ViJUDPTNKJVy2GstSObnCOkaDKCLDh6Wx73.kENNPG3E6eYKa"], ["created_at", "2015-02-26 01:23:02.323969"], ["updated_at", "2015-02-26 01:23:02.323969"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$s7imrH/RJwwGbfKNPwYU1uIa/neVJGscHK6p8mfBFQdK7.6przZwy"], ["created_at", "2015-02-26 01:25:13.231614"], ["updated_at", "2015-02-26 01:25:13.231614"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$TT6v2bbjPyC/tVzqHHqKPOgYo/wnd3rQPWycHNgdqLd4872KGYBMe"], ["created_at", "2015-02-26 01:25:13.240371"], ["updated_at", "2015-02-26 01:25:13.240371"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$wlSdHhLtxTUhfe8Vgd/dzuaseaPHyLPcnqiiaCcb2PlLG6BhuDPLS"], ["created_at", "2015-02-26 01:27:06.129352"], ["updated_at", "2015-02-26 01:27:06.129352"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$8OpeX1eh2BdXTtnyTLzCTOV0NsuYD0CS9502VGpsha3ACZv9SD/JS"], ["created_at", "2015-02-26 01:27:06.137903"], ["updated_at", "2015-02-26 01:27:06.137903"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$uYJDkNV3/as0ZG2G0H9RyuGbm2uK7lNgxjYCEINK3R2S32Ybtc9yC"], ["created_at", "2015-02-26 01:27:23.668015"], ["updated_at", "2015-02-26 01:27:23.668015"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$ihuG/by0VYAKQ1BSKmhHGOsM0KQ43uT1X0Ny4.dj8A43aySal2dh."], ["created_at", "2015-02-26 01:27:23.677232"], ["updated_at", "2015-02-26 01:27:23.677232"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$R85pCmRNZYKQOs1INSrf4eqgzULfba89IO3e4MLwqbi4YgjwGe4oS"], ["created_at", "2015-02-26 01:27:32.452313"], ["updated_at", "2015-02-26 01:27:32.452313"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$/9t1PKpbVYAa8p.RpqoHqOQGIdyUmsAICDhYz0dcMLK8gDx2Cxhgm"], ["created_at", "2015-02-26 01:27:32.459574"], ["updated_at", "2015-02-26 01:27:32.459574"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$OsamSRSJ5tjDru1NrjdCsOjs4mTGwUjankclwmeJn8L7ROGf2YDWO"], ["created_at", "2015-02-26 01:30:27.459587"], ["updated_at", "2015-02-26 01:30:27.459587"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "someone@somewhere.com"], ["password_digest", "$2a$04$T6onQaAbeB1PD7QenXumr.3SLdJmRrA8SdcQlWua73Hmh6tW73enO"], ["created_at", "2015-02-26 01:30:27.468500"], ["updated_at", "2015-02-26 01:30:27.468500"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
