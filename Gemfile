@@ -1,10 +1,13 @@
 source 'https://rubygems.org'
 
-#gem for client side validations
+
 #gem 'client_side_validations'
+
+#gem for adding files
 gem "paperclip", "~> 4.2"
 #added this because it's what made our other Heroku deploy from rails work.
 gem 'rails_12factor', group: :production
+#gem for rendering nice forms in bootstrap with 'bootstrap_form_for'
 gem 'bootstrap_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -53,7 +56,7 @@ group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
-
+  #generate more helpful error pages
   gem "better_errors"
 
   #added with Ira in lesson
@@ -65,6 +68,7 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
+  #simplify generating tests
   gem 'rspec-rails', '~> 3.0'
 end
 
