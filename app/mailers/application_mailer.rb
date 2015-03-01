@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "welcome@simply.me"
+  default from: "welcome@datalus.me"
   layout 'mailer'
 end

@@ -17,10 +17,10 @@ class UserMailer < ApplicationMailer
   #
   def welcome(user)
     #generate a welcome email when a user is generated
-    @greeting = "Hi! Welcome to Simply, #{user.first_name}!"
+    @greeting = "Hi! Welcome to DataLus, #{user.first_name}!"
     #@greeting = "Hi! #{user.name}"
 
-    mail to: "#{user.email}", subject: "Welcome To Simply!"
+    mail to: "#{user.email}", subject: "Welcome To DataLus!"
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
