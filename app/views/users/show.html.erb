@@ -1,4 +1,4 @@
-
+w
 <div class="row-fluid">
  
   <div id="welcome">
@@ -19,7 +19,7 @@
 Photo time!
             <% @user.photos.each do |p| %>
                 <%= image_tag p.image.url(:medium) %><br />
-                <%= button_to "Remove Photo", photo_path(@user, p), method: :delete %>
+                <%= button_to "Remove Photo", user_photo_path(@user, p), method: :delete %>
 
                 <br />  
           
