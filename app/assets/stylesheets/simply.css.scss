@@ -23,6 +23,7 @@
 
  h1 {
   font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
  }
 
 body {
@@ -37,10 +38,12 @@ html, body, .container-fluid, .row, .col-md-12, .row-fluid {
 }
 
   .container-fluid {
+    padding: 0px;
 
     .row {
       text-align: center;
       padding-top: 60px;
+
      
      }
   }

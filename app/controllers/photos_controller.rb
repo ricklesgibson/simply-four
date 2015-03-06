@@ -3,6 +3,8 @@ class PhotosController < ApplicationController
     @photos = Photo.all
   end
   def new
+    #added @user due to nested routes
+    @user = User.find(params[:user_id])
     @photo =Photo.new
     if current_user == nil
       redirect_to new_sessions_path
@@ -27,6 +29,12 @@ class PhotosController < ApplicationController
 
   def show
 
+  end
+
+  def destroy
+    @photo = Photo.find(params[:id])
+    @photo.destroy
+    redirect_to current_user
   end
 
   def photo_params
