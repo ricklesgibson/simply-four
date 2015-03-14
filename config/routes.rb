@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     resources :photos, only: [:index, :new, :create, :destroy]
   end
   root 'users#new'
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
    
   
   #get 'login', to: 'sessions#new', as: :new_sessions

@@ -47,19 +47,19 @@ Rails.application.configure do
     :storage => :s3,
     :s3_credentials => {
       :bucket => ENV['S3_SIMPLY_BUCKET'],
-      :access_key_id => ENV['S3_KEY'],
-      :secret_access_key => ENV['S3_SECRET']
+      :access_key_id => ENV['S3_KEY_ID'],
+      :secret_access_key => ENV['S3_SECRET_ACCESS_KEY']
   }
 }
 
   #Gmail setup
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    domain:               'gmail.com',
-    user_name:            ENV['GMAIL_USERNAME'],
-    password:             ENV['GMAIL_PASSWORD'],
-    authentication:       'plain',
-    enable_starttls_auto: true  }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   address:              'smtp.gmail.com',
+  #   port:                 587,
+  #   domain:               'gmail.com',
+  #   user_name:            ENV['GMAIL_USERNAME'],
+  #   password:             ENV['GMAIL_PASSWORD'],
+  #   authentication:       'plain',
+  #   enable_starttls_auto: true  }
 end

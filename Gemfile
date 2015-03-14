@@ -3,6 +3,12 @@ source 'https://rubygems.org'
 
 #gem 'client_side_validations'
 
+#for job queuing
+gem 'sidekiq'
+
+#sinatra, installed when we used sidekiq
+gem 'sinatra', :require => nil
+
 #gem for adding files
 gem "paperclip", "~> 4.2"
 #added this because it's what made our other Heroku deploy from rails work.
