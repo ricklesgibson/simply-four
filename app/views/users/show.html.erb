@@ -1,11 +1,12 @@
-w
-<div class="row-fluid">
- 
-  <div id="welcome">
-    <h1>simply.me</h1>
-  </div>
-    <%=image_tag("Piercycle.jpg", width: '100%')%>
-    <div class="col-md-6 col-md-offset-3">
+<section id="home" class="row-fluid" id="home">
+      <div class="dots">
+        <article>
+          <div id="welcome"></div>
+          <%= @user.last_name %>
+          </article>
+          </section>
+        </div>
+     <div class="col-md-6 col-md-offset-3">
         <%= @user.email %><br />
         <%= @user.id %><br />
         <%= @user.first_name %><br />
@@ -13,23 +14,203 @@ w
         <%= @user.bio_text %><br />
         <%= image_tag @user.avatar.url(:thumb) %>
 
-<%= link_to "Upload photo", new_user_photo_path(@user) %>
-
-
-Photo time!
+        <%= link_to "Upload photo", new_user_photo_path(@user) %> Photo time!
             <% @user.photos.each do |p| %>
                 <%= image_tag p.image.url(:medium) %><br />
-                <%= button_to "Remove Photo", user_photo_path(@user, p), method: :delete %>
-
-                <br />  
-          
+                <%= button_to "Remove Photo", user_photo_path(@user, p), method: :delete %><br />  
             <% end %>
-      </div>
- <%= render partial: 'layouts/map'%>           
+     </div>
+ <%#= render partial: 'layouts/map'%>           
+      <!-- from Angelhack -->
       
+    <section id="about" class="container-fluid pages">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+      </div>
+      <div class="row">
+      <article class="col-md-4 center">
+        <h1 class="pg-title center"><span>About</span></h1>
+        <div id="profile-img-circle" class="circle" data-toggle="modal" data-target="#profileImageModal">
+            <i class="icon-edit"></i>
+            <%= image_tag(@user.avatar.url(:medium), class: "img-circle") %>
+        </div>
+        <p class="mrg20B" contenteditable>
+        <strong>Greg Thomas</strong> is a full time <strong>Engineer</strong>. I live in <strong>Los Angeles, CA</strong>. Phasellus vulputate iaculis congue. Donec ultrices, leo in fermentum accumsan, dolor eros condimentum arcu pretium rutrum diam  habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas facilisis blandit ligula dictum et vitae rutrum lorem velit nec ligula. Please take a moment to review selections of my work and feel free to contact me for further information on my background, skills and experience.
+        </p>
 
-</div>
-  
+        <p><a href="javascript:void(0);" class="btn btn-styled txt16 txt-cap"><i class="icon-download-alt"></i> <strong>Download Resume</strong></a></p>                    
+      </article>
+        <div id="profileImageModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="aboutModalLabel">Edit Image</h3>
+          </div>
+          <div class="modal-body">
+            <div class="row-fluid">
+                <div class="col-md-6">
+                    Current image:
+                    <span id="profile-img-edit">
+                    
+                    </span>
+                    <button class="btn btn-primary">Upload New Image</button>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      <!-- Mid Col -->                
+        <article class="col-md-4 col-md-offset-1 mob-txt-center">
+        <h3 class="tags">My Skills</h3>
+        <span class="pull-right">
+            <i role="button" class="icon-plus-sign" data-toggle="modal" data-target="#skillsModal"></i>
+        </span>
+        <ul id="skillItemList">
+            <li class="skillItem">
+                <p class="mrg20B">
+                    <strong class="txt16 txt-darkgrey" contenteditable>UX Design</strong><br />
+                    <span contenteditable>Research Plans / Prototypes / User Testing / Interaction Design / Visual Design</span>
+                    <i class="pull-right icon-remove-sign skillItemRemove"></i>
+                </p>            
+            </li>
+            <li class="skillItem">
+                <p class="mrg20B">
+                    <strong class="txt16 txt-darkgrey">Development</strong><br />
+                    XHTML / HTML5 / CSS3 / WordPress Implementation
+                    <i class="pull-right icon-remove-sign skillItemRemove"></i>
+                </p>
+            </li>
+            <li class="skillItem">
+                <p class="mrg20B">
+                    <strong class="txt16 txt-darkgrey">Digital and Printing</strong><br />
+                    Logo Design / Illustration / Business Stationery / Interactive ads / Emailer / Microsites
+                    <i class="pull-right icon-remove-sign skillItemRemove"></i>
+                </p>
+            </li>
+            <li class="skillItem">
+                <p class="mrg20B">
+                    <strong class="txt16 txt-darkgrey">Team/Project Management</strong><br />
+                    Lead Planning / Ability to Multi-Task / Prioritize projects / Implementation project / project Budget and Resource Allocation
+                    <i class="pull-right icon-remove-sign skillItemRemove"></i>
+                </p>
+            </li>
+            <li class="skillItem" id="skillItemTemplate">
+                <p class="mrg20B">
+                    <strong class="txt16 txt-darkgrey skillItemHeading" contenteditable></strong><br />
+                    <span contenteditable class="skillItemSkills"></span>
+                    <i class="pull-right icon-remove-sign skillItemRemove"></i>
+                </p>
+            </li>
+        </ul>
+        <!--  Modal Begin -->
+        <div id="skillsModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="skillsModalLabel" aria-hidden="true">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="skillsModalLabel">My Skills</h3>
+          </div>
+          <div class="modal-body">
+            <div class="row-fluid">
+                <div class="col-md-6">
+                    <h4>Enter Heading</h4>
+                    <input type="text" data-list="skill_headings" id="typeaheadSkillHeadings" placeholder="Enter a skill heading.." data-provide="typeahead" class="typeaheadList typeahead" autocomplete="off">
+                </div>
+                <div class="col-md-4">
+                    <h4>Skills</h4>
+                    <input type="text" data-list="skills" id="typeaheadSkills" placeholder="Enter a skill.." data-provide="typeahead" class="typeahead typeaheadList" autocomplete="off">
+                    <button class="btn btn-primary" id="btnAddSkill">Add</button>
+                    <div id="listExistingSkills">
+                        
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary" id="skillsSave">Save changes</button>
+          </div>
+        </div>
+        <!-- Modal End -->
+          <!-- My Skills END -->
+        <h3 class="tags">Tools I Use</h3>
+        <span class="pull-right"><i role="button" class="icon-edit" data-toggle="modal" data-target="#tiuModal"></i></span>
+            <p id="tiuTemplate" style="display: none">
+              <i class="icon-angle-right txt-orange"></i>
+              <strong class="toolName txt-darkgrey">Photoshop</strong>
+              <span class="txt12 toolDesc"> - To design website and mobile site/app</span>
+            </p>
+        <div id="tiuList">
+        </div>
+        <div id="tiuModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="tiuModalLabel" aria-hidden="true">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="tiuModalLabel">Tools I Use</h3>
+          </div>
+          <div class="modal-body">
+            <div class="row-fluid">
+                <div class="col-md-6">
+                    <h4>Add a Tool</h4>
+                    <input type="text" id="typeaheadTools" placeholder="Enter a tool.." data-list="tools" data-provide="typeahead" class="typeahead typeaheadList" autocomplete="off">
+                    <textarea id="toolDescription" rows="3" placeholder="Enter a description..."></textarea>
+                    <button class="btn btn-primary" id="btnAddTool">Add</button>
+                </div>
+                <div class="col-md-6">
+                    <h4>Existing Tools</h4>
+                    <div id="listItemTemplate" class="listItemTool" style="display: none">
+                        <span class="toolName"></span>
+                        <span class="toolDescription"></span>
+                    </div>
+                    <div id="listExistingTools">
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary" id="btnToolsSave">Save changes</button>
+          </div>
+        </div>
+          <!-- Tools I Use END -->
+          
+      </article><!-- Left Col -->
+
+        <article class="col-md-3 mob-txt-center">
+        <h3 class="tags">Experience</h3>
+        <span class="pull-right"><i class="icon-edit"></i></span>
+        <p class="mrg20B">
+            <strong class="txt-darkgrey txt16">Freelance</strong><br />
+            <strong class="txt16">2009- Current</strong><br />
+            <span>Currently working from my office in Mumbai, with my colleague.</span>
+        </p>
+        <p class="mrg20B">
+            <strong class="txt-darkgrey txt16">ABC Tech Pvt. Ltd.</strong><br />
+            <strong class="txt16">2007- 2009 | Design Team Manager</strong><br />
+            <span>Job description porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur adipisci velit.</span>
+        </p>
+        <p class="mrg20B">
+            <strong class="txt-darkgrey txt16">Attixx Core Pvt. Ltd.</strong><br />
+            <strong class="txt16">2004- 2007 | Web Designer</strong><br />
+            <span>Job description quia dolor sit porro quisquam est qui consectetur adipisci velit dolorem ipsum amet.</span>
+        </p>    
+        <h3 class="tags">Awards</h3>
+        <span class="pull-right"><i class="icon-edit"></i></span>
+        <p class="mrg20B">
+            <span class="txt-orange">Site of the Month (BSCD Site)</span><br />
+            <a href="javascript:void(0);">abcexpyr.com</a> - Jun 2012<br />
+            <span class="txt12">Peor dolor sit porro quisquam est qui consectetur adipisci velit dolorem ipsum amet.</span>
+        </p>
+        <p>
+            <span class="txt-orange">Best UI Design (RHWA Site)</span><br />
+            <a href="javascript:void(0);">opqrswrd.com</a> - Oct 2012<br />
+            <span class="txt12">Dolor sit porro quisquam est qui consectetur adipisci velit dolorem ipsum amet.</span>
+        </p>
+        </article><!-- Right Col -->
+      </div><!-- row END -->
+    </div><!-- container END -->
+  </section><!-- About END -->
 
       
   

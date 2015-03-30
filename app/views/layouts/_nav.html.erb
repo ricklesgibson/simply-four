@@ -1,4 +1,4 @@
- <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
+ <nav class="navbar-default navbar-inverse navbar-static-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">DataLus</a>
+      <a class="navbar-brand" href="/">Simply</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -18,15 +18,16 @@
 
         <!-- this is sloppy and the whole navbar and styling needs to be redone -->
           <% if current_user != nil %>
-            <li class="active"> <%#= link_to "Home", show_user_path %></li>
-            <li class="active"> <%= link_to "Log out", sessions_path, method: :delete %></li>
-            <li class="active"> <%= link_to "Edit Page", edit_user_path(current_user)%></li>
-            <li class="active"> <%= image_tag @user.avatar.url(:icon) %> </li>
-           <li class="active"> <%= link_to "#{@user.first_name}", "#" %></li>
+            <li> <%#= link_to "Home", show_user_path %></li>
+            <li> <%= link_to "Log out", sessions_path, method: :delete %></li>
+            <li> <%= link_to "Edit Page", edit_user_path(current_user)%></li>
+            <li> <%= link_to "View Page", user_path(current_user)%></li>
+            <li> <%= image_tag current_user.avatar.url(:icon) if (current_user.avatar.url != "/images/original/missing.png" && current_user.avatar.url != nil )%> </li>
+           <li> <%= link_to "#{@user.first_name}", "#" %></li>
 
           <% else %>
-            <li class="active"> <%= link_to "Sign up", new_user_path, method: :get %></li>
-            <li class="active"> <%= link_to "Log in", new_sessions_path %></li>
+            <li> <%= link_to "Sign up", new_user_path, method: :get %></li>
+            <li> <%= link_to "Log in", new_sessions_path %></li>
           <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->

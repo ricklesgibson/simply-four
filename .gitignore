@@ -2,4 +2,6 @@
 # Ignore application configuration
 /config/application.yml
 
+tmp/
+log/
 #how about now?
