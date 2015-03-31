@@ -1,27 +1,54 @@
 <style type="text/css">
+    .style2 {
+         
+           <% if @user.photos.last.image.url == nil %> 
+           background: url('Piercycle.jpg') no-repeat center center ;
+           <% else %> 
+           background: url('<%= @user.photos.last.image.url %>') no-repeat center center !important;
+           <% end %>
+        background-attachment: fixed !important;
+        background-size: cover !important;
+        min-height: 768px !important;
+        width: 100% !important;
+        display: block !important;
+    }
+    .style3{
+        text-align: left !important;
+         background-color: transparent !important;
+        font-family: 'Roboto Condensed', sans-serif !important;
+        
+        font-size: 2em !important;
+        padding-top: 5px !important;
+        margin-left: 30px !important;
+        text-shadow: -1px -1px #1a1c1b !important;
+        color: #fff !important;
+    }
 </style>
 
-<section id="home" class="row-fluid">
+<section id="home" class="row-fluid style2">
       <div class="dots">
-        <article>
+      <div class="col-md-4">
+        <article class="style3">
           <div id="welcome"></div>
-          <%= @user.last_name %>
+          <%= @user.bio_text %>
           </article>
-            </div>
-     <div class="col-md-6 col-md-offset-3">
-        <%= @user.email %><br />
-        <%= @user.id %><br />
-        <%= @user.first_name %><br />
-        <%= @user.last_name %><br />
-        <%= @user.bio_text %><br />
-        <%= image_tag @user.avatar.url(:thumb) %>
+    </div>
+          
+     <div class="col-md-6">
+        <%#= @user.email %><br />
+        <%#= @user.id %><br />
+        <%#= @user.first_name %><br />
+        <%#= @user.last_name %><br />
+        <%#= @user.bio_text %><br />
+        <%#= image_tag @user.avatar.url(:thumb) %>
 
-        <%= link_to "Upload photo", new_user_photo_path(@user) %> Photo time!
-            <% @user.photos.each do |p| %>
-                <%= image_tag p.image.url(:medium) %><br />
-                <%= button_to "Remove Photo", user_photo_path(@user, p), method: :delete %><br />  
-            <% end %>
+        <%#= link_to "Edit background image", new_user_photo_path(@user) %> 
+            <%# @user.photos.each do |p| %>
+                <%#= image_tag p.image.url(:medium) %><br />
+                <%#= button_to "Remove Photo", user_photo_path(@user, p), method: :delete %><br />  
+            <%# end %>
      </div>
+       </div>
      </section>
      
 
@@ -36,9 +63,9 @@
             <%= image_tag(@user.avatar.url(:medium), class: "img-circle") %>
         </div>
         <p class="mrg20B" contenteditable>
-        <strong>Greg Thomas</strong> is a full time <strong>Engineer</strong>. I live in <strong>Los Angeles, CA</strong>. Phasellus vulputate iaculis congue. Donec ultrices, leo in fermentum accumsan, dolor eros condimentum arcu pretium rutrum diam  habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas facilisis blandit ligula dictum et vitae rutrum lorem velit nec ligula. Please take a moment to review selections of my work and feel free to contact me for further information on my background, skills and experience.
+        <%= @user.bio_text %>
         </p>
-
+<!--
         <p><a href="javascript:void(0);" class="btn btn-styled txt16 txt-cap"><i class="icon-download-alt"></i> <strong>Download Resume</strong></a></p>                    
       </article>
         <div id="profileImageModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
@@ -63,7 +90,7 @@
           </div>
         </div>
       <!-- Mid Col -->                
-        <article class="col-md-4 col-md-offset-1 mob-txt-center">
+<!--        <article class="col-md-4 col-md-offset-1 mob-txt-center">
         <h3 class="tags">My Skills</h3>
         <span class="pull-right">
             <i role="button" class="icon-plus-sign" data-toggle="modal" data-target="#skillsModal"></i>
@@ -106,7 +133,7 @@
             </li>
         </ul>
         <!--  Modal Begin -->
-        <div id="skillsModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="skillsModalLabel" aria-hidden="true">
+ <!--       <div id="skillsModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="skillsModalLabel" aria-hidden="true">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             <h3 id="skillsModalLabel">My Skills</h3>
@@ -134,7 +161,7 @@
         </div>
         <!-- Modal End -->
           <!-- My Skills END -->
-        <h3 class="tags">Tools I Use</h3>
+<!--        <h3 class="tags">Tools I Use</h3>
         <span class="pull-right"><i role="button" class="icon-edit" data-toggle="modal" data-target="#tiuModal"></i></span>
             <p id="tiuTemplate" style="display: none">
               <i class="icon-angle-right txt-orange"></i>
@@ -174,9 +201,9 @@
         </div>
           <!-- Tools I Use END -->
           
-      </article><!-- Left Col -->
+ <!--     </article><!-- Left Col -->
 
-        <article class="col-md-3 mob-txt-center">
+ <!--       <article class="col-md-3 mob-txt-center">
         <h3 class="tags">Experience</h3>
         <span class="pull-right"><i class="icon-edit"></i></span>
         <p class="mrg20B">
@@ -210,7 +237,7 @@
       </div><!-- row END -->
     </div><!-- container END -->
   <!-- About END -->
-
+   
  
 
 

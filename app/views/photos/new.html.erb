@@ -1,19 +1,42 @@
-  <h1>Photos#new</h1>
-    <p>Find me in app/views/photos/new.html.erb</p>
+<style>
+  #photo_image {
+    width: 300px !important;
+    color: #fff !important;
+    font-size: 14px !important;
+  }
 
-    <%= form_for([@user, @photo]) do |f| %>
+</style>
+
+
+    <section id="home" class="row-fluid">
+          <div class="dots">
+            <article>
+              <div id="welcome"></div>
+              Update your background!
+
+              <div class="row" >
+
+          <div class=" col-md-4 col-md-offset-4">
+          <%= bootstrap_form_for([@user, @photo]) do |f| %>
 
       <div class="field">
-        <%= f.label :photo_date %><br>
+       
         <%= f.date_field :photo_date %>
       </div>
 
       <div class="field">
-        <%= f.label :image %><br>
+       
         <%= f.file_field :image %>
       </div>
 
       <div class="actions">
-        <%= f.submit %>
+        <%= f.primary %>
       </div>
     <% end %>
+       </div>
+            </article>
+          </div>
+
+    </section>
+
+
