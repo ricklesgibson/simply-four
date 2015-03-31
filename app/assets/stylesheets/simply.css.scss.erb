@@ -160,25 +160,25 @@ ul{
   margin : 0 auto;
 }
 
-// #home {
-//   // background: image-url("Piercycle.jpg") no-repeat center center;
-//   background-attachment: fixed;
-//   background-size: cover;
-//   min-height: 768px;
-//   width: 100%;
-//   display: block;
-// }
 
-#show {
-  // background: image-url("Piercycle.jpg") no-repeat center center;
+
+#show .dots {
+  background-image: url('dot-pattern.png');
+  z-index:15;
+  background-repeat: repeat;
+  min-height: 768px;
+  width: 100%;
+
+  
+}
+
+#home {
+  background: image-url('Piercycle.jpg') no-repeat center center;
   background-attachment: fixed;
   background-size: cover;
   min-height: 768px;
   width: 100%;
   display: block;
-  position:absolute;
-  z-index:25;
-  top: 225px;
 }
 
 #home .dots {
@@ -191,6 +191,20 @@ ul{
 }
 
 #home article {
+  height: 100px;
+  position: absolute;
+  text-align: center;
+  top: 225px;
+  width: 100%;
+  background-color: rgba(256, 256, 256, 0.7);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 5em;
+  padding-top: 5px;
+  text-shadow: -1px -1px #1a1c1b;
+}
+
+#show article {
   height: 100px;
   position: absolute;
   text-align: center;
